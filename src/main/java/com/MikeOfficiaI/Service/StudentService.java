@@ -11,7 +11,20 @@ import java.util.Collection;
 public class StudentService {
     @Autowired
     private StudentDao studentDao;
+
     public Collection<Student> getAllStudents(){
-        return studentDao.getAllStudent();
+        return this.studentDao.getAllStudent();
+    }
+
+    public Student getStudentById(int id){
+        return this.studentDao.getStudentById(id);
+    }
+
+    public void removeStudentById(int id){
+        this.studentDao.removeStudentById(id);
+    }
+
+    public void updateStudent(Student student) {
+        this.studentDao.updateStudent(student);
     }
 }
