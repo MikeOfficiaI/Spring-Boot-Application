@@ -38,4 +38,5 @@ public class StudentController {
     public void insertStudent(@RequestBody Student student){
         studentService.insertStudent(student);
     }
+
 }
